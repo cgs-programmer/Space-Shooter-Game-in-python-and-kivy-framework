@@ -1,0 +1,60 @@
+#:kivy 1.10.0
+
+<Game>:
+    bg: background
+    back: backer
+    Background:
+        id: background
+        source: 'bg.png'
+
+    Button:
+        id: backer
+        text: '<'
+        size_hint: None,None
+        size: 25,25
+        pos: 0,575
+        opacity: 0.5
+        disabled: False
+        on_press: root.manager.current = 'Menu' # goto menu when pressed
+        
+<Player>:
+    image_1: player
+    image_2: bullet
+    pos: 120,0
+    Image:
+        id: player
+        source: 'player.png'
+        size: 80,80
+        pos: root.pos 
+    Image:
+        id: bullet
+        source: 'laserGreen.png'
+        size: 10,20
+        pos: root.x + 35,root.y + 60
+
+<Score>:
+    text: '0'
+    pos: 100,500
+    font_size: '30sp'
+
+# The menu screen  
+<Menu>:
+    score_points: score_points
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Start'
+            on_press: root.manager.current = 'Game' # goto game when pressed
+        Label:
+            id: score_points
+            font_size: '50'
+            text: '0'
+        Button:
+            text: 'Game by Joseph Chhetri'
+
+
+
+
+
+
+
