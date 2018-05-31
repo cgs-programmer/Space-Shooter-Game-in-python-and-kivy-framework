@@ -1,5 +1,5 @@
 # Space-Shooter-Game-in-python-and-kivy-framework
-
+Space-Shooter-Game-in-python-and-kivy-framework/Game_screen_shot/shooting.JPG
 This is a simple space shooter game made in python programming language and kivy framework.
 
 1.The game has 2 scenes (menu scene & game scene)
